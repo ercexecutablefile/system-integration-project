@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Student Council Election Briefing",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-07",
+    "max_capacity":  72,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 007 A",
+                                 "email":  "student007.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 007 B",
+                                 "email":  "student007.b@example.com"
+                             }
+                         ]
+}
