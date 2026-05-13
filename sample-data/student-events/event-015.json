@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Community Outreach Planning",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-15",
+    "max_capacity":  38,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 015 A",
+                                 "email":  "student015.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 015 B",
+                                 "email":  "student015.b@example.com"
+                             }
+                         ]
+}
