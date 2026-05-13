@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Gender Sensitivity Forum",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-31",
+    "max_capacity":  90,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 061 A",
+                                 "email":  "student061.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 061 B",
+                                 "email":  "student061.b@example.com"
+                             }
+                         ]
+}
