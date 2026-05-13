@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Postman Collection Review",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-30",
+    "max_capacity":  30,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 091 A",
+                                 "email":  "student091.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 091 B",
+                                 "email":  "student091.b@example.com"
+                             }
+                         ]
+}
