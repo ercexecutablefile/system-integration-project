@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Reading Month Launch",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-04",
+    "max_capacity":  118,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 065 A",
+                                 "email":  "student065.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 065 B",
+                                 "email":  "student065.b@example.com"
+                             }
+                         ]
+}
