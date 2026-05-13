@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Faculty Student Dialogue",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-09-05",
+    "max_capacity":  72,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 097 A",
+                                 "email":  "student097.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 097 B",
+                                 "email":  "student097.b@example.com"
+                             }
+                         ]
+}
