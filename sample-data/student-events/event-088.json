@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Desktop App Integration Lab",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-27",
+    "max_capacity":  99,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 088 A",
+                                 "email":  "student088.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 088 B",
+                                 "email":  "student088.b@example.com"
+                             }
+                         ]
+}
