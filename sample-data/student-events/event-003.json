@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Campus Club Fair",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-03",
+    "max_capacity":  44,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 003 A",
+                                 "email":  "student003.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 003 B",
+                                 "email":  "student003.b@example.com"
+                             }
+                         ]
+}
