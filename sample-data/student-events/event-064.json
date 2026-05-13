@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Book Donation Campaign",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-03",
+    "max_capacity":  111,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 064 A",
+                                 "email":  "student064.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 064 B",
+                                 "email":  "student064.b@example.com"
+                             }
+                         ]
+}
