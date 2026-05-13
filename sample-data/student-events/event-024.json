@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Financial Literacy for Students",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-24",
+    "max_capacity":  101,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 024 A",
+                                 "email":  "student024.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 024 B",
+                                 "email":  "student024.b@example.com"
+                             }
+                         ]
+}
