@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Study Habits Seminar",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-17",
+    "max_capacity":  119,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 078 A",
+                                 "email":  "student078.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 078 B",
+                                 "email":  "student078.b@example.com"
+                             }
+                         ]
+}
