@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Nutrition Awareness Talk",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-16",
+    "max_capacity":  112,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 077 A",
+                                 "email":  "student077.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 077 B",
+                                 "email":  "student077.b@example.com"
+                             }
+                         ]
+}
