@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Basketball League Briefing",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-11",
+    "max_capacity":  77,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 072 A",
+                                 "email":  "student072.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 072 B",
+                                 "email":  "student072.b@example.com"
+                             }
+                         ]
+}
