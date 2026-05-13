@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Student Feedback Forum",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-09-03",
+    "max_capacity":  58,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 095 A",
+                                 "email":  "student095.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 095 B",
+                                 "email":  "student095.b@example.com"
+                             }
+                         ]
+}
