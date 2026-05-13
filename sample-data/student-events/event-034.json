@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Game Development Mini Jam",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-04",
+    "max_capacity":  81,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 034 A",
+                                 "email":  "student034.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 034 B",
+                                 "email":  "student034.b@example.com"
+                             }
+                         ]
+}
