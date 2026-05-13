@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "AI Prompting Seminar",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-13",
+    "max_capacity":  54,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 043 A",
+                                 "email":  "student043.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 043 B",
+                                 "email":  "student043.b@example.com"
+                             }
+                         ]
+}
