@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "System Integration Demo Day",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-09",
+    "max_capacity":  116,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 039 A",
+                                 "email":  "student039.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 039 B",
+                                 "email":  "student039.b@example.com"
+                             }
+                         ]
+}
