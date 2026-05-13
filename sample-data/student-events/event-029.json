@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Student Talent Showcase",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-29",
+    "max_capacity":  46,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 029 A",
+                                 "email":  "student029.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 029 B",
+                                 "email":  "student029.b@example.com"
+                             }
+                         ]
+}
