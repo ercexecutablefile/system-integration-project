@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Campus Safety Orientation",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-29",
+    "max_capacity":  76,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 059 A",
+                                 "email":  "student059.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 059 B",
+                                 "email":  "student059.b@example.com"
+                             }
+                         ]
+}
