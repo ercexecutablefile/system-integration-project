@@ -41,6 +41,11 @@ X-API-Key: student-event-api-key-2026
 
 The API also has simple per-IP rate limiting.
 
+## Demo Login
+
+- Email: `kaye.dela.cruz@student.edu`
+- Password: `kaye1S23`
+
 ## Run Locally
 
 1. Start Apache and MySQL in XAMPP.

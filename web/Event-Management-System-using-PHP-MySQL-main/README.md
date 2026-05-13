@@ -54,9 +54,13 @@ The Event Management System is a web application designed to help users manage e
     - Access the application in your web browser at `http://localhost/event_management`.
 
 ## Login Credentials for Testing
-- **Admin User:**
-  - Username: `shaikat143@gmail.com`
-  - Password: `5254`
+- **Student Demo User:**
+  - Email: `kaye.dela.cruz@student.edu`
+  - Password: `kaye1S23`
+
+## Demo Data
+- Events use student-centered titles such as organization assemblies, leadership workshops, recognition days, and career readiness clinics.
+- Attendees use formal student names and school-style email addresses.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
