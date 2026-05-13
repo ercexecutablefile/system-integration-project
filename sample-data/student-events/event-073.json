@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Volleyball Clinic",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-12",
+    "max_capacity":  84,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 073 A",
+                                 "email":  "student073.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 073 B",
+                                 "email":  "student073.b@example.com"
+                             }
+                         ]
+}
