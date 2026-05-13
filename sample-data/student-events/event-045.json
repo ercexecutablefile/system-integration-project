@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Resume Review Session",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-15",
+    "max_capacity":  68,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 045 A",
+                                 "email":  "student045.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 045 B",
+                                 "email":  "student045.b@example.com"
+                             }
+                         ]
+}
