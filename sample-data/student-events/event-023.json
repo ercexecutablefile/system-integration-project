@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Alumni Career Forum",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-23",
+    "max_capacity":  94,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 023 A",
+                                 "email":  "student023.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 023 B",
+                                 "email":  "student023.b@example.com"
+                             }
+                         ]
+}
