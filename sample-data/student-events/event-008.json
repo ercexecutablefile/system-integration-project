@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Academic Advising Day",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-08",
+    "max_capacity":  79,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 008 A",
+                                 "email":  "student008.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 008 B",
+                                 "email":  "student008.b@example.com"
+                             }
+                         ]
+}
