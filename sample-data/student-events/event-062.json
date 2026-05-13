@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Cultural Exchange Program",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-01",
+    "max_capacity":  97,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 062 A",
+                                 "email":  "student062.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 062 B",
+                                 "email":  "student062.b@example.com"
+                             }
+                         ]
+}
