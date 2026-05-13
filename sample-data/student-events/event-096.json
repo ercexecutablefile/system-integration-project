@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Course Evaluation Drive",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-09-04",
+    "max_capacity":  65,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 096 A",
+                                 "email":  "student096.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 096 B",
+                                 "email":  "student096.b@example.com"
+                             }
+                         ]
+}
