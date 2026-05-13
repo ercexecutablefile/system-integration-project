@@ -46,6 +46,12 @@ The API also has simple per-IP rate limiting.
 - Email: `kaye.dela.cruz@student.edu`
 - Password: `kaye1S23`
 
+Desktop sample login:
+
+- Username: `kaye`
+- Email: `kayeexample@gmail.com`
+- Password: `kaye1S23`
+
 ## Run Locally
 
 1. Start Apache and MySQL in XAMPP.
