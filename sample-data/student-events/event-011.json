@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Library Skills Bootcamp",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-11",
+    "max_capacity":  100,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 011 A",
+                                 "email":  "student011.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 011 B",
+                                 "email":  "student011.b@example.com"
+                             }
+                         ]
+}
