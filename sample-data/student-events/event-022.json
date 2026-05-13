@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Thesis Writing Clinic",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-22",
+    "max_capacity":  87,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 022 A",
+                                 "email":  "student022.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 022 B",
+                                 "email":  "student022.b@example.com"
+                             }
+                         ]
+}
