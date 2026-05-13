@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Career Readiness Workshop",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-05",
+    "max_capacity":  58,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 005 A",
+                                 "email":  "student005.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 005 B",
+                                 "email":  "student005.b@example.com"
+                             }
+                         ]
+}
