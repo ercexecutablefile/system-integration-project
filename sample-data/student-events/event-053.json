@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "ID Validation Booth",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-23",
+    "max_capacity":  34,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 053 A",
+                                 "email":  "student053.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 053 B",
+                                 "email":  "student053.b@example.com"
+                             }
+                         ]
+}
