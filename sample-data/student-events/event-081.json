@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Midterm Consultation Day",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-20",
+    "max_capacity":  50,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 081 A",
+                                 "email":  "student081.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 081 B",
+                                 "email":  "student081.b@example.com"
+                             }
+                         ]
+}
