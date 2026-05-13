@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Exam Review Marathon",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-19",
+    "max_capacity":  43,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 080 A",
+                                 "email":  "student080.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 080 B",
+                                 "email":  "student080.b@example.com"
+                             }
+                         ]
+}
