@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Mobile App Prototype Demo",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-19",
+    "max_capacity":  66,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 019 A",
+                                 "email":  "student019.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 019 B",
+                                 "email":  "student019.b@example.com"
+                             }
+                         ]
+}
