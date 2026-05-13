@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Wellness Zumba Session",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-15",
+    "max_capacity":  105,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 076 A",
+                                 "email":  "student076.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 076 B",
+                                 "email":  "student076.b@example.com"
+                             }
+                         ]
+}
