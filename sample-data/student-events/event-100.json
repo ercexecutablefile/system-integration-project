@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Student Event Management Showcase",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-09-08",
+    "max_capacity":  93,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 100 A",
+                                 "email":  "student100.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 100 B",
+                                 "email":  "student100.b@example.com"
+                             }
+                         ]
+}
