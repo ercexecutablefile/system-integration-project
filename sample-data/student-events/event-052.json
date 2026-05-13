@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Enrollment Assistance Day",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-22",
+    "max_capacity":  117,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 052 A",
+                                 "email":  "student052.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 052 B",
+                                 "email":  "student052.b@example.com"
+                             }
+                         ]
+}
