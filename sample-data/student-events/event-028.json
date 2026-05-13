@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Volunteer Orientation",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-28",
+    "max_capacity":  39,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 028 A",
+                                 "email":  "student028.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 028 B",
+                                 "email":  "student028.b@example.com"
+                             }
+                         ]
+}
