@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Student Recognition Ceremony",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-20",
+    "max_capacity":  103,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 050 A",
+                                 "email":  "student050.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 050 B",
+                                 "email":  "student050.b@example.com"
+                             }
+                         ]
+}
