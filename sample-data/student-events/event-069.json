@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Dance Workshop",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-08",
+    "max_capacity":  56,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 069 A",
+                                 "email":  "student069.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 069 B",
+                                 "email":  "student069.b@example.com"
+                             }
+                         ]
+}
