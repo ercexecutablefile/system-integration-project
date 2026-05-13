@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Peer Mentoring Kickoff",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-09",
+    "max_capacity":  86,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 009 A",
+                                 "email":  "student009.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 009 B",
+                                 "email":  "student009.b@example.com"
+                             }
+                         ]
+}
