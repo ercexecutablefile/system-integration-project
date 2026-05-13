@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Mental Health Awareness Seminar",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-10",
+    "max_capacity":  93,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 010 A",
+                                 "email":  "student010.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 010 B",
+                                 "email":  "student010.b@example.com"
+                             }
+                         ]
+}
