@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Web Development Study Jam",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-20",
+    "max_capacity":  73,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 020 A",
+                                 "email":  "student020.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 020 B",
+                                 "email":  "student020.b@example.com"
+                             }
+                         ]
+}
