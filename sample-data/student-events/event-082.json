@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Finals Preparation Forum",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-21",
+    "max_capacity":  57,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 082 A",
+                                 "email":  "student082.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 082 B",
+                                 "email":  "student082.b@example.com"
+                             }
+                         ]
+}
