@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Student Leadership Summit",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-02",
+    "max_capacity":  37,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 002 A",
+                                 "email":  "student002.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 002 B",
+                                 "email":  "student002.b@example.com"
+                             }
+                         ]
+}
