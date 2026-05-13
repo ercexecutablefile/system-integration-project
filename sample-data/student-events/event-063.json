@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Language Learning Circle",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-02",
+    "max_capacity":  104,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 063 A",
+                                 "email":  "student063.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 063 B",
+                                 "email":  "student063.b@example.com"
+                             }
+                         ]
+}
