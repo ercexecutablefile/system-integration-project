@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Student Records Cleanup",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-24",
+    "max_capacity":  41,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 054 A",
+                                 "email":  "student054.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 054 B",
+                                 "email":  "student054.b@example.com"
+                             }
+                         ]
+}
