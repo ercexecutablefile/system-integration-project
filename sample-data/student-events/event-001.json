@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Freshman Orientation Day",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-01",
+    "max_capacity":  30,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 001 A",
+                                 "email":  "student001.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 001 B",
+                                 "email":  "student001.b@example.com"
+                             }
+                         ]
+}
