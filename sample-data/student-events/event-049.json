@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Parent Student Consultation",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-19",
+    "max_capacity":  96,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 049 A",
+                                 "email":  "student049.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 049 B",
+                                 "email":  "student049.b@example.com"
+                             }
+                         ]
+}
