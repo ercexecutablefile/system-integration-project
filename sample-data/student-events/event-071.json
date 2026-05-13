@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Sports Tryout Registration",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-10",
+    "max_capacity":  70,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 071 A",
+                                 "email":  "student071.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 071 B",
+                                 "email":  "student071.b@example.com"
+                             }
+                         ]
+}
