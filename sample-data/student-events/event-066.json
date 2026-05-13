@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Film Appreciation Night",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-05",
+    "max_capacity":  35,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 066 A",
+                                 "email":  "student066.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 066 B",
+                                 "email":  "student066.b@example.com"
+                             }
+                         ]
+}
