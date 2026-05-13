@@ -70,3 +70,8 @@ dotnet run --project C:\xampp\htdocs\Project\DesktopEventClient
 - `database/` - shared MySQL database export
 - `postman/` - API testing collection
 - `docs/` - project architecture notes
+
+## Reports
+
+The web system includes a functional Event Reports page that reads from `GET /reports`.
+It shows live totals, event attendance performance, and website activity history logs for event and attendee changes.

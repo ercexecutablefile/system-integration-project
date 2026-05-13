@@ -40,7 +40,7 @@ CREATE TABLE `events` (
   PRIMARY KEY (`id`),
   KEY `created_by` (`created_by`),
   CONSTRAINT `events_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `events` WRITE;
@@ -66,6 +66,26 @@ LOCK TABLES `attendees` WRITE;
 /*!40000 ALTER TABLE `attendees` DISABLE KEYS */;
 INSERT INTO `attendees` VALUES (1,'Maria Santos','maria.santos@student.edu',2),(2,'Juan Dela Cruz','juan.delacruz@student.edu',2),(3,'Andrea Reyes','andrea.reyes@student.edu',2),(4,'Paolo Garcia','paolo.garcia@student.edu',2),(5,'Sofia Mendoza','sofia.mendoza@student.edu',2),(6,'Miguel Torres','miguel.torres@student.edu',3),(7,'Camille Navarro','camille.navarro@student.edu',3),(8,'Joshua Lim','joshua.lim@student.edu',3);
 /*!40000 ALTER TABLE `attendees` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `activity_logs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `activity_logs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `action` varchar(50) NOT NULL,
+  `entity_type` varchar(50) NOT NULL,
+  `entity_id` int(11) DEFAULT NULL,
+  `description` varchar(255) NOT NULL,
+  `actor` varchar(100) NOT NULL DEFAULT 'System',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `activity_logs` WRITE;
+/*!40000 ALTER TABLE `activity_logs` DISABLE KEYS */;
+INSERT INTO `activity_logs` VALUES (1,'seeded','event',2,'Student demo event available: CSS Student Organization General Assembly','System','2026-05-13 11:17:59'),(2,'seeded','event',3,'Student demo event available: Student Leadership and Team Building Workshop','System','2026-05-13 11:17:59'),(3,'seeded','event',4,'Student demo event available: Campus Academic Excellence Recognition Day','System','2026-05-13 11:17:59'),(4,'seeded','event',5,'Student demo event available: Student Career Readiness and Resume Clinic','System','2026-05-13 11:17:59');
+/*!40000 ALTER TABLE `activity_logs` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

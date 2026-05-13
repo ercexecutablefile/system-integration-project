@@ -29,7 +29,7 @@ The API also applies a simple per-IP rate limit of 100 requests per minute.
 - `POST /attendees`
 - `PUT /attendees/{id}`
 - `DELETE /attendees/{id}`
-- `GET /reports`
+- `GET /reports` - event summary, event performance, and website activity history logs
 
 ## Example Postman Test
 

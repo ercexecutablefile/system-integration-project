@@ -1,3 +1,18 @@
+<?php
+require 'api_client.php';
+
+$response = event_api_request('GET', '/reports');
+$report = $response['data'] ?? [];
+$summary = $report['summary'] ?? [
+    'total_events' => 0,
+    'total_attendees' => 0,
+    'total_capacity' => 0,
+    'upcoming_events' => 0,
+    'capacity_used_percent' => 0,
+];
+$events = $report['events'] ?? [];
+$logs = $report['logs'] ?? [];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,100 +23,186 @@
     <style>
         body {
             background: url('assets/images/reportsBg.jpg') no-repeat center center fixed;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             background-size: cover;
-            position: relative;
-            overflow: hidden;
+            min-height: 100vh;
         }
-        .navbar {
-            background-color: #2196f3;
+        .navbar { background-color: #2196f3; }
+        .navbar-brand, .navbar-nav .nav-link { color: #fff !important; }
+        .page-wrap {
+            background: rgba(255, 255, 255, 0.94);
+            min-height: calc(100vh - 56px);
+            padding: 32px 0;
         }
-        .navbar-brand {
-            color: #fff !important;
+        .metric {
+            background: #fff;
+            border-left: 5px solid #2196f3;
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            min-height: 116px;
         }
-        .container {
-            margin-top: 40px;
+        .metric .label {
+            color: #5f6b76;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
         }
-        .btn-custom {
-            background-color: #2196f3;
-            color: white;
-            border: none;
+        .metric .value {
+            color: #17212b;
+            font-size: 2rem;
+            font-weight: 700;
         }
-        .btn-custom:hover {
-            background-color: #1976d2;
-        }
-        .chart-container {
-            background: white;
+        .panel {
+            background: #fff;
+            border-radius: 8px;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .table-responsive {
+            max-height: 390px;
+        }
+        .progress {
+            min-width: 110px;
+        }
+        .log-badge {
+            text-transform: capitalize;
         }
     </style>
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="dashboard.php">Event Management</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="dashboard.php">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="events.php">Manage Events</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="attendees.php">Manage Attendees</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="logout_process.php">Logout</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="events.php">Manage Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="attendees.php">Manage Attendees</a></li>
+                <li class="nav-item"><a class="nav-link" href="logout_process.php">Logout</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Page Content -->
-<div class="container">
-    <h1 class="text-center mb-4">Event Reports</h1>
-
-    <!-- Filters -->
-    <div class="row mb-4">
-        <div class="col-md-6">
-            <input type="date" class="form-control" placeholder="Start Date">
+<div class="page-wrap">
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <div>
+                <h1 class="mb-1">Event Reports</h1>
+                <p class="text-muted mb-0">Live event summary and website activity history from the shared API.</p>
+            </div>
+            <div class="d-flex gap-2">
+                <a href="generate_report.php?type=summary" class="btn btn-success">Export Summary CSV</a>
+                <a href="generate_report.php?type=logs" class="btn btn-outline-primary">Export Logs CSV</a>
+            </div>
         </div>
-        <div class="col-md-6">
-            <input type="date" class="form-control" placeholder="End Date">
+
+        <?php if (($response['status'] ?? '') !== 'success'): ?>
+            <div class="alert alert-danger">
+                <?= htmlspecialchars($response['message'] ?? 'Unable to load report data from the API.') ?>
+            </div>
+        <?php endif; ?>
+
+        <div class="row g-3 mb-4">
+            <div class="col-md-3">
+                <div class="metric">
+                    <div class="label">Total Events</div>
+                    <div class="value"><?= (int) $summary['total_events'] ?></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="metric">
+                    <div class="label">Registered Attendees</div>
+                    <div class="value"><?= (int) $summary['total_attendees'] ?></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="metric">
+                    <div class="label">Upcoming Events</div>
+                    <div class="value"><?= (int) $summary['upcoming_events'] ?></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="metric">
+                    <div class="label">Capacity Used</div>
+                    <div class="value"><?= htmlspecialchars((string) $summary['capacity_used_percent']) ?>%</div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- Report Sections -->
-    <div class="chart-container">
-        <h4>Event Summary</h4>
-        <!-- Insert a bar chart here for event summary -->
-    </div>
+        <div class="panel mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="mb-0">Event Performance</h4>
+                <span class="text-muted">Updates when event or attendee records change</span>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Event</th>
+                            <th>Date</th>
+                            <th>Attendees</th>
+                            <th>Capacity</th>
+                            <th>Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($events as $event): ?>
+                            <?php
+                                $capacity = max(1, (int) $event['max_capacity']);
+                                $attendees = (int) $event['attendees'];
+                                $percent = min(100, round(($attendees / $capacity) * 100));
+                            ?>
+                            <tr>
+                                <td><?= (int) $event['id'] ?></td>
+                                <td><?= htmlspecialchars($event['event_name']) ?></td>
+                                <td><?= htmlspecialchars($event['event_date']) ?></td>
+                                <td><?= $attendees ?></td>
+                                <td><?= $capacity ?></td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: <?= $percent ?>%"><?= $percent ?>%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-    <div class="chart-container mt-4">
-        <h4>Attendee Analytics</h4>
-        <!-- Insert a pie chart here for attendee analytics -->
-    </div>
-
-    <div class="chart-container mt-4">
-        <h4>Event Performance</h4>
-        <!-- Insert a bar chart here for event performance -->
-    </div>
-
-    <div class="chart-container mt-4">
-        <h4>Revenue Report</h4>
-        <!-- Insert a line chart here for revenue trends -->
-    </div>
-
-    <!-- Export Button -->
-    <div class="text-end mb-3">
-        <a href="generate_report.php?type=summary" class="btn btn-success">Export Event Summary</a>
-        <a href="generate_report.php?type=attendance" class="btn btn-success">Export Attendance Data</a>
+        <div class="panel">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="mb-0">Website Activity History</h4>
+                <span class="text-muted">Latest <?= count($logs) ?> actions</span>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th>Date/Time</th>
+                            <th>Action</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Actor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($logs as $log): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($log['created_at']) ?></td>
+                                <td><span class="badge bg-primary log-badge"><?= htmlspecialchars($log['action']) ?></span></td>
+                                <td><?= htmlspecialchars($log['entity_type']) ?></td>
+                                <td><?= htmlspecialchars($log['description']) ?></td>
+                                <td><?= htmlspecialchars($log['actor']) ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 

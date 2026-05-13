@@ -98,7 +98,9 @@ function handle_events(string $method, ?int $id): void
             $data['created_by']
         );
         $stmt->execute();
-        json_response(['status' => 'success', 'message' => 'Event created.', 'id' => $conn->insert_id], 201);
+        $eventId = $conn->insert_id;
+        log_activity('created', 'event', $eventId, 'Created event: ' . $data['event_name']);
+        json_response(['status' => 'success', 'message' => 'Event created.', 'id' => $eventId], 201);
     }
 
     if ($method === 'PUT' && $id !== null) {
@@ -115,10 +117,12 @@ function handle_events(string $method, ?int $id): void
             $id
         );
         $stmt->execute();
+        log_activity('updated', 'event', $id, 'Updated event: ' . $data['event_name']);
         json_response(['status' => 'success', 'message' => 'Event updated.']);
     }
 
     if ($method === 'DELETE' && $id !== null) {
+        $eventName = get_event_name($id);
         $stmt = $conn->prepare('DELETE FROM attendees WHERE event_id = ?');
         $stmt->bind_param('i', $id);
         $stmt->execute();
@@ -126,6 +130,7 @@ function handle_events(string $method, ?int $id): void
         $stmt = $conn->prepare('DELETE FROM events WHERE id = ?');
         $stmt->bind_param('i', $id);
         $stmt->execute();
+        log_activity('deleted', 'event', $id, 'Deleted event: ' . ($eventName ?? 'Event #' . $id));
         json_response(['status' => 'success', 'message' => 'Event deleted.']);
     }
 
@@ -168,7 +173,9 @@ function handle_attendees(string $method, ?int $id): void
         $stmt = $conn->prepare('INSERT INTO attendees (name, email, event_id) VALUES (?, ?, ?)');
         $stmt->bind_param('ssi', $data['name'], $data['email'], $data['event_id']);
         $stmt->execute();
-        json_response(['status' => 'success', 'message' => 'Attendee created.', 'id' => $conn->insert_id], 201);
+        $attendeeId = $conn->insert_id;
+        log_activity('created', 'attendee', $attendeeId, 'Registered attendee ' . $data['name'] . ' for ' . (get_event_name($data['event_id']) ?? 'event #' . $data['event_id']));
+        json_response(['status' => 'success', 'message' => 'Attendee created.', 'id' => $attendeeId], 201);
     }
 
     if ($method === 'PUT' && $id !== null) {
@@ -178,13 +185,16 @@ function handle_attendees(string $method, ?int $id): void
         $stmt = $conn->prepare('UPDATE attendees SET name = ?, email = ?, event_id = ? WHERE id = ?');
         $stmt->bind_param('ssii', $data['name'], $data['email'], $data['event_id'], $id);
         $stmt->execute();
+        log_activity('updated', 'attendee', $id, 'Updated attendee: ' . $data['name']);
         json_response(['status' => 'success', 'message' => 'Attendee updated.']);
     }
 
     if ($method === 'DELETE' && $id !== null) {
+        $attendeeName = get_attendee_name($id);
         $stmt = $conn->prepare('DELETE FROM attendees WHERE id = ?');
         $stmt->bind_param('i', $id);
         $stmt->execute();
+        log_activity('deleted', 'attendee', $id, 'Deleted attendee: ' . ($attendeeName ?? 'Attendee #' . $id));
         json_response(['status' => 'success', 'message' => 'Attendee deleted.']);
     }
 
@@ -225,13 +235,70 @@ function handle_reports(string $method): void
         json_response(['status' => 'error', 'message' => 'Method not allowed.'], 405);
     }
 
-    $result = db()->query(
+    $conn = db();
+    $result = $conn->query(
         'SELECT e.id, e.event_name, e.event_date, e.max_capacity, COUNT(a.id) AS attendees
          FROM events e
          LEFT JOIN attendees a ON a.event_id = e.id
          GROUP BY e.id
          ORDER BY e.event_date ASC'
     );
+    $events = $result->fetch_all(MYSQLI_ASSOC);
 
-    json_response(['status' => 'success', 'data' => $result->fetch_all(MYSQLI_ASSOC)]);
+    $logsResult = $conn->query(
+        'SELECT id, action, entity_type, entity_id, description, actor, created_at
+         FROM activity_logs
+         ORDER BY created_at DESC, id DESC
+         LIMIT 100'
+    );
+    $logs = $logsResult ? $logsResult->fetch_all(MYSQLI_ASSOC) : [];
+
+    $totalEvents = count($events);
+    $totalAttendees = array_sum(array_map(fn ($event) => (int) $event['attendees'], $events));
+    $totalCapacity = array_sum(array_map(fn ($event) => (int) $event['max_capacity'], $events));
+    $upcomingEvents = count(array_filter($events, fn ($event) => $event['event_date'] >= date('Y-m-d')));
+
+    json_response([
+        'status' => 'success',
+        'data' => [
+            'summary' => [
+                'total_events' => $totalEvents,
+                'total_attendees' => $totalAttendees,
+                'total_capacity' => $totalCapacity,
+                'upcoming_events' => $upcomingEvents,
+                'capacity_used_percent' => $totalCapacity > 0 ? round(($totalAttendees / $totalCapacity) * 100, 2) : 0,
+            ],
+            'events' => $events,
+            'logs' => $logs,
+        ],
+    ]);
+}
+
+function log_activity(string $action, string $entityType, ?int $entityId, string $description, string $actor = 'API'): void
+{
+    $stmt = db()->prepare(
+        'INSERT INTO activity_logs (action, entity_type, entity_id, description, actor) VALUES (?, ?, ?, ?, ?)'
+    );
+    $stmt->bind_param('ssiss', $action, $entityType, $entityId, $description, $actor);
+    $stmt->execute();
+}
+
+function get_event_name(int $eventId): ?string
+{
+    $stmt = db()->prepare('SELECT event_name FROM events WHERE id = ?');
+    $stmt->bind_param('i', $eventId);
+    $stmt->execute();
+    $event = $stmt->get_result()->fetch_assoc();
+
+    return $event['event_name'] ?? null;
+}
+
+function get_attendee_name(int $attendeeId): ?string
+{
+    $stmt = db()->prepare('SELECT name FROM attendees WHERE id = ?');
+    $stmt->bind_param('i', $attendeeId);
+    $stmt->execute();
+    $attendee = $stmt->get_result()->fetch_assoc();
+
+    return $attendee['name'] ?? null;
 }
