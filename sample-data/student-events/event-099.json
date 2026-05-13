@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Year End Student Assembly",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-09-07",
+    "max_capacity":  86,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 099 A",
+                                 "email":  "student099.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 099 B",
+                                 "email":  "student099.b@example.com"
+                             }
+                         ]
+}
