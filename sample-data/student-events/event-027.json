@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Blood Donation Registration",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-27",
+    "max_capacity":  32,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 027 A",
+                                 "email":  "student027.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 027 B",
+                                 "email":  "student027.b@example.com"
+                             }
+                         ]
+}
