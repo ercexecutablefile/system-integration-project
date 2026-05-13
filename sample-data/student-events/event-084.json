@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Git and GitHub Workshop",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-23",
+    "max_capacity":  71,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 084 A",
+                                 "email":  "student084.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 084 B",
+                                 "email":  "student084.b@example.com"
+                             }
+                         ]
+}
