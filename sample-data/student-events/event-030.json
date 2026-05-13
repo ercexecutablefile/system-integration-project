@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Debate Society Invitational",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-30",
+    "max_capacity":  53,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 030 A",
+                                 "email":  "student030.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 030 B",
+                                 "email":  "student030.b@example.com"
+                             }
+                         ]
+}
