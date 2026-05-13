@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Robotics Club Demonstration",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-03",
+    "max_capacity":  74,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 033 A",
+                                 "email":  "student033.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 033 B",
+                                 "email":  "student033.b@example.com"
+                             }
+                         ]
+}
