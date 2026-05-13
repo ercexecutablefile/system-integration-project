@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Internship Orientation",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-17",
+    "max_capacity":  82,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 047 A",
+                                 "email":  "student047.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 047 B",
+                                 "email":  "student047.b@example.com"
+                             }
+                         ]
+}
