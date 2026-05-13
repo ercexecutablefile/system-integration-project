@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Rate Limiting Demo Session",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-29",
+    "max_capacity":  113,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 090 A",
+                                 "email":  "student090.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 090 B",
+                                 "email":  "student090.b@example.com"
+                             }
+                         ]
+}
