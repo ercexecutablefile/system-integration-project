@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Work Immersion Briefing",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-18",
+    "max_capacity":  89,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 048 A",
+                                 "email":  "student048.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 048 B",
+                                 "email":  "student048.b@example.com"
+                             }
+                         ]
+}
