@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Arts and Culture Night",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-13",
+    "max_capacity":  114,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 013 A",
+                                 "email":  "student013.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 013 B",
+                                 "email":  "student013.b@example.com"
+                             }
+                         ]
+}
