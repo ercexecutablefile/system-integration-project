@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Math Quiz Bee",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-01",
+    "max_capacity":  60,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 031 A",
+                                 "email":  "student031.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 031 B",
+                                 "email":  "student031.b@example.com"
+                             }
+                         ]
+}
