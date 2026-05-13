@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Intramurals Opening Ceremony",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-14",
+    "max_capacity":  31,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 014 A",
+                                 "email":  "student014.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 014 B",
+                                 "email":  "student014.b@example.com"
+                             }
+                         ]
+}
