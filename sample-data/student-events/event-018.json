@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Cybersecurity Awareness Talk",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-18",
+    "max_capacity":  59,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 018 A",
+                                 "email":  "student018.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 018 B",
+                                 "email":  "student018.b@example.com"
+                             }
+                         ]
+}
