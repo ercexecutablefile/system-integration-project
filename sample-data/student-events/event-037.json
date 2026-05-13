@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "API Testing with Postman",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-07",
+    "max_capacity":  102,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 037 A",
+                                 "email":  "student037.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 037 B",
+                                 "email":  "student037.b@example.com"
+                             }
+                         ]
+}
