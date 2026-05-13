@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Capstone Proposal Defense",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-21",
+    "max_capacity":  80,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 021 A",
+                                 "email":  "student021.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 021 B",
+                                 "email":  "student021.b@example.com"
+                             }
+                         ]
+}
