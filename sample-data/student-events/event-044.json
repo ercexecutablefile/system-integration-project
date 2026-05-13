@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Digital Portfolio Workshop",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-14",
+    "max_capacity":  61,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 044 A",
+                                 "email":  "student044.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 044 B",
+                                 "email":  "student044.b@example.com"
+                             }
+                         ]
+}
