@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "First Aid Awareness Session",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-27",
+    "max_capacity":  62,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 057 A",
+                                 "email":  "student057.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 057 B",
+                                 "email":  "student057.b@example.com"
+                             }
+                         ]
+}
