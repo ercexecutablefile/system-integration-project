@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Swagger Documentation Lab",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-07-08",
+    "max_capacity":  109,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 038 A",
+                                 "email":  "student038.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 038 B",
+                                 "email":  "student038.b@example.com"
+                             }
+                         ]
+}
