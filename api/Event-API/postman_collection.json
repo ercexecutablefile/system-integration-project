@@ -1,0 +1,118 @@
+{
+  "info": {
+    "name": "Student Event Integration API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost/Project/Event-API/index.php" },
+    { "key": "api_key", "value": "student-event-api-key-2026" },
+    { "key": "event_id", "value": "1" },
+    { "key": "attendee_id", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": { "method": "GET", "url": "{{base_url}}/health" }
+    },
+    {
+      "name": "List Events",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "X-API-Key", "value": "{{api_key}}" }],
+        "url": "{{base_url}}/events"
+      }
+    },
+    {
+      "name": "Create Event",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "X-API-Key", "value": "{{api_key}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"event_name\": \"Student Orientation\",\n  \"event_desc\": \"Freshmen orientation program\",\n  \"event_date\": \"2026-06-01\",\n  \"max_capacity\": 50,\n  \"created_by\": 1\n}"
+        },
+        "url": "{{base_url}}/events"
+      }
+    },
+    {
+      "name": "Update Event",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "X-API-Key", "value": "{{api_key}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"event_name\": \"Updated Student Orientation\",\n  \"event_desc\": \"Updated program description\",\n  \"event_date\": \"2026-06-02\",\n  \"max_capacity\": 60,\n  \"created_by\": 1\n}"
+        },
+        "url": "{{base_url}}/events/{{event_id}}"
+      }
+    },
+    {
+      "name": "Delete Event",
+      "request": {
+        "method": "DELETE",
+        "header": [{ "key": "X-API-Key", "value": "{{api_key}}" }],
+        "url": "{{base_url}}/events/{{event_id}}"
+      }
+    },
+    {
+      "name": "List Attendees",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "X-API-Key", "value": "{{api_key}}" }],
+        "url": "{{base_url}}/attendees"
+      }
+    },
+    {
+      "name": "Create Attendee",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "X-API-Key", "value": "{{api_key}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Maria Santos\",\n  \"email\": \"maria@example.com\",\n  \"event_id\": 1\n}"
+        },
+        "url": "{{base_url}}/attendees"
+      }
+    },
+    {
+      "name": "Update Attendee",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "X-API-Key", "value": "{{api_key}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Maria Updated\",\n  \"email\": \"maria.updated@example.com\",\n  \"event_id\": 1\n}"
+        },
+        "url": "{{base_url}}/attendees/{{attendee_id}}"
+      }
+    },
+    {
+      "name": "Delete Attendee",
+      "request": {
+        "method": "DELETE",
+        "header": [{ "key": "X-API-Key", "value": "{{api_key}}" }],
+        "url": "{{base_url}}/attendees/{{attendee_id}}"
+      }
+    },
+    {
+      "name": "Reports",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "X-API-Key", "value": "{{api_key}}" }],
+        "url": "{{base_url}}/reports"
+      }
+    }
+  ]
+}

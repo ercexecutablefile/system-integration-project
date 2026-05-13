@@ -1,0 +1,60 @@
+# System Integration Architecture
+
+## Systems
+
+1. **Web System**
+   - Folder: `web/Event-Management-System-using-PHP-MySQL-main`
+   - Technology: PHP, Bootstrap
+   - Purpose: Event and attendee management through a browser
+
+2. **Desktop System**
+   - Folder: `desktop/DesktopEventClient`
+   - Technology: C# Windows Forms
+   - Purpose: Event and attendee management through a desktop application
+
+3. **API System**
+   - Folder: `api/Event-API`
+   - Technology: PHP REST API
+   - Purpose: Centralized CRUD layer for both systems
+
+4. **Database**
+   - Name: `event_management`
+   - Technology: MySQL/MariaDB through XAMPP
+   - Tables: `users`, `events`, `attendees`
+
+## Integration Rule
+
+The web and desktop systems should not directly share files or directly control each other. They are integrated by making HTTP requests to the API.
+
+```text
+Web -> API -> MySQL
+Desktop -> API -> MySQL
+```
+
+## API Endpoints
+
+- `GET /events`
+- `GET /events/{id}`
+- `POST /events`
+- `PUT /events/{id}`
+- `DELETE /events/{id}`
+- `GET /attendees`
+- `POST /attendees`
+- `PUT /attendees/{id}`
+- `DELETE /attendees/{id}`
+- `GET /reports`
+
+## Required Testing
+
+Use these tools for the integration demo:
+
+- Browser: open the PHP website and Swagger docs
+- Postman: import `postman/student-event-integration-api.postman_collection.json`
+- Swagger: open `http://localhost/Project/Event-API/docs.php`
+
+## Security Features
+
+- API key header: `X-API-Key`
+- Rate limiting: 100 requests per minute per IP
+- Prepared SQL statements in the API
+- JSON validation for required fields, dates, email, and positive integers

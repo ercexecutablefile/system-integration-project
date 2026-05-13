@@ -1,0 +1,15 @@
+bin/
+obj/
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.pdb
+*.exe
+*.dll
+api/Event-API/storage/
+desktop/**/bin/
+desktop/**/obj/
+web/**/api/
+*.log

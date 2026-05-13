@@ -1,0 +1,132 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Student Event Integration API",
+    "version": "1.0.0",
+    "description": "Separate API layer for the PHP web system and C# desktop system. Use X-API-Key: student-event-api-key-2026."
+  },
+  "servers": [
+    {
+      "url": "http://localhost/Project/Event-API/index.php"
+    }
+  ],
+  "security": [
+    {
+      "ApiKeyAuth": []
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
+      }
+    },
+    "schemas": {
+      "EventInput": {
+        "type": "object",
+        "required": ["event_name", "event_desc", "event_date", "max_capacity"],
+        "properties": {
+          "event_name": { "type": "string", "example": "Student Orientation" },
+          "event_desc": { "type": "string", "example": "Freshmen orientation program" },
+          "event_date": { "type": "string", "format": "date", "example": "2026-06-01" },
+          "max_capacity": { "type": "integer", "example": 50 },
+          "created_by": { "type": "integer", "example": 1 }
+        }
+      },
+      "AttendeeInput": {
+        "type": "object",
+        "required": ["name", "email", "event_id"],
+        "properties": {
+          "name": { "type": "string", "example": "Maria Santos" },
+          "email": { "type": "string", "format": "email", "example": "maria@example.com" },
+          "event_id": { "type": "integer", "example": 1 }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/events": {
+      "get": {
+        "summary": "List events",
+        "parameters": [
+          {
+            "name": "search",
+            "in": "query",
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": { "200": { "description": "Event list" } }
+      },
+      "post": {
+        "summary": "Create event",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/EventInput" } } }
+        },
+        "responses": { "201": { "description": "Event created" } }
+      }
+    },
+    "/events/{id}": {
+      "get": {
+        "summary": "Get one event",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": { "200": { "description": "Event details" }, "404": { "description": "Not found" } }
+      },
+      "put": {
+        "summary": "Update event",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/EventInput" } } }
+        },
+        "responses": { "200": { "description": "Event updated" } }
+      },
+      "delete": {
+        "summary": "Delete event",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": { "200": { "description": "Event deleted" } }
+      }
+    },
+    "/attendees": {
+      "get": {
+        "summary": "List attendees",
+        "parameters": [
+          { "name": "event_id", "in": "query", "schema": { "type": "integer" } }
+        ],
+        "responses": { "200": { "description": "Attendee list" } }
+      },
+      "post": {
+        "summary": "Create attendee",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/AttendeeInput" } } }
+        },
+        "responses": { "201": { "description": "Attendee created" } }
+      }
+    },
+    "/attendees/{id}": {
+      "put": {
+        "summary": "Update attendee",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/AttendeeInput" } } }
+        },
+        "responses": { "200": { "description": "Attendee updated" } }
+      },
+      "delete": {
+        "summary": "Delete attendee",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": { "200": { "description": "Attendee deleted" } }
+      }
+    },
+    "/reports": {
+      "get": {
+        "summary": "Event attendance report",
+        "responses": { "200": { "description": "Report rows" } }
+      }
+    }
+  }
+}
