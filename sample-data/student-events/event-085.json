@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Open Source Contribution Day",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-24",
+    "max_capacity":  78,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 085 A",
+                                 "email":  "student085.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 085 B",
+                                 "email":  "student085.b@example.com"
+                             }
+                         ]
+}
