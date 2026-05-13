@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Environmental Sustainability Drive",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-26",
+    "max_capacity":  115,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 026 A",
+                                 "email":  "student026.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 026 B",
+                                 "email":  "student026.b@example.com"
+                             }
+                         ]
+}
