@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Research Poster Expo",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-06-04",
+    "max_capacity":  51,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 004 A",
+                                 "email":  "student004.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 004 B",
+                                 "email":  "student004.b@example.com"
+                             }
+                         ]
+}
