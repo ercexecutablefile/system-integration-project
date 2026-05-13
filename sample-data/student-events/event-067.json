@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Photography Walk",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-06",
+    "max_capacity":  42,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 067 A",
+                                 "email":  "student067.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 067 B",
+                                 "email":  "student067.b@example.com"
+                             }
+                         ]
+}
