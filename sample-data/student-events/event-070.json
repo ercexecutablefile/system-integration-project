@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "Theater Rehearsal Camp",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-08-09",
+    "max_capacity":  63,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 070 A",
+                                 "email":  "student070.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 070 B",
+                                 "email":  "student070.b@example.com"
+                             }
+                         ]
+}
