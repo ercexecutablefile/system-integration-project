@@ -1,0 +1,17 @@
+﻿{
+    "event_name":  "XAMPP Deployment Clinic",
+    "event_desc":  "Student-centered sample event for API, Swagger, Postman, web, and desktop integration demos.",
+    "event_date":  "2026-09-02",
+    "max_capacity":  51,
+    "created_by":  1,
+    "sample_attendees":  [
+                             {
+                                 "name":  "Student 094 A",
+                                 "email":  "student094.a@example.com"
+                             },
+                             {
+                                 "name":  "Student 094 B",
+                                 "email":  "student094.b@example.com"
+                             }
+                         ]
+}
