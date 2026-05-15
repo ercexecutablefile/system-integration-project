@@ -307,8 +307,14 @@ function handle_reports(string $method): void
 
     $conn = db();
 
+    // =========================
+    // EVENTS
+    // =========================
     $events = $conn->query(
-        'SELECT e.id, e.event_name, e.event_date, e.max_capacity,
+        'SELECT e.id,
+                e.event_name,
+                e.event_date,
+                e.max_capacity,
                 COUNT(a.id) AS attendees
          FROM events e
          LEFT JOIN attendees a ON a.event_id = e.id
@@ -316,9 +322,55 @@ function handle_reports(string $method): void
          ORDER BY e.event_date ASC'
     )->fetch_all(MYSQLI_ASSOC);
 
+    // =========================
+    // SUMMARY CALCULATION
+    // =========================
+    $totalEvents = count($events);
+    $totalAttendees = 0;
+    $totalCapacity = 0;
+    $upcomingEvents = 0;
+
+    $today = date('Y-m-d');
+
+    foreach ($events as $e) {
+        $totalAttendees += (int)$e['attendees'];
+        $totalCapacity += (int)$e['max_capacity'];
+
+        if ($e['event_date'] >= $today) {
+            $upcomingEvents++;
+        }
+    }
+
+    $capacityUsedPercent = $totalCapacity > 0
+        ? round(($totalAttendees / $totalCapacity) * 100, 2)
+        : 0;
+
+    // =========================
+    // ACTIVITY LOGS
+    // =========================
+    $logs = $conn->query(
+        'SELECT *
+         FROM activity_logs
+         ORDER BY created_at DESC
+         LIMIT 50'
+    )->fetch_all(MYSQLI_ASSOC);
+
+    // =========================
+    // FINAL RESPONSE
+    // =========================
     json_response([
         'status' => 'success',
-        'data' => $events
+        'data' => [
+            'summary' => [
+                'total_events' => $totalEvents,
+                'total_attendees' => $totalAttendees,
+                'total_capacity' => $totalCapacity,
+                'upcoming_events' => $upcomingEvents,
+                'capacity_used_percent' => $capacityUsedPercent
+            ],
+            'events' => $events,
+            'logs' => $logs
+        ]
     ]);
 }
 

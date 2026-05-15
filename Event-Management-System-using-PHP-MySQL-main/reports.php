@@ -2,16 +2,32 @@
 require 'api_client.php';
 
 $response = event_api_request('GET', '/reports');
-$report = $response['data'] ?? [];
-$summary = $report['summary'] ?? [
-    'total_events' => 0,
-    'total_attendees' => 0,
-    'total_capacity' => 0,
-    'upcoming_events' => 0,
-    'capacity_used_percent' => 0,
-];
-$events = $report['events'] ?? [];
-$logs = $report['logs'] ?? [];
+
+if (($response['status'] ?? '') !== 'success') {
+    $report = [];
+    $summary = [
+        'total_events' => 0,
+        'total_attendees' => 0,
+        'total_capacity' => 0,
+        'upcoming_events' => 0,
+        'capacity_used_percent' => 0,
+    ];
+    $events = [];
+    $logs = [];
+} else {
+    $report = $response['data'] ?? [];
+
+    $summary = $report['summary'] ?? [
+        'total_events' => 0,
+        'total_attendees' => 0,
+        'total_capacity' => 0,
+        'upcoming_events' => 0,
+        'capacity_used_percent' => 0,
+    ];
+
+    $events = $report['events'] ?? [];
+    $logs = $report['logs'] ?? [];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
